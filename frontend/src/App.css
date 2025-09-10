@@ -1,70 +1,104 @@
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f9f9f9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6fb;
+  margin: 0;
+  padding: 0;
   direction: rtl;
 }
 
 .container {
-  max-width: 400px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 25px;
+  max-width: 700px;
+  margin: 30px auto;
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
-  color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  color: #1a237e;
 }
 
-.form label {
-  display: block;
-  margin-bottom: 15px;
-  color: #444;
-  font-size: 14px;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.form input[type="number"],
-.form input[type="text"] {
-  width: 100%;
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #37474f;
+}
+
+input[type="number"] {
   padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
   border-radius: 6px;
+  border: 1px solid #cfd8dc;
+  margin-top: 5px;
 }
 
 .checkbox {
-  display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-bottom: 10px;
-}
-
-.checkbox input {
-  margin-left: 8px;
+  gap: 10px;
 }
 
 button {
-  width: 100%;
-  padding: 10px;
-  background-color: #1976d2;
+  background: #1976d2;
   color: white;
+  font-weight: bold;
   border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-button:hover {
-  background-color: #145ca1;
-}
-
-.results {
-  margin-top: 20px;
-  padding: 15px;
-  background: #eef7ff;
-  border: 1px solid #cce0ff;
+  padding: 12px;
   border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:disabled {
+  background: #90caf9;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: #1565c0;
+}
+
+.report-box {
+  background: #f9fbff;
+  border: 2px solid #cdd9f5;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+  line-height: 1.7;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.report-box h2 {
+  color: #1a237e;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.category-title {
+  margin-top: 20px;
+  color: #0d47a1;
+  border-bottom: 1px solid #bbdefb;
+  padding-bottom: 5px;
+}
+
+.report-item {
+  margin: 5px 0;
+  list-style: "✔ ";
+  padding-left: 10px;
+}
+
+.report-text {
+  margin: 8px 0;
+  color: #37474f;
 }

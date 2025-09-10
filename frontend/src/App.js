@@ -9,7 +9,8 @@ function App() {
     servesMeat: false,
   });
 
-  const [requirements, setRequirements] = useState(null);
+  const [report, setReport] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -21,9 +22,11 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setReport(null);
 
     try {
-      const res = await fetch("http://localhost:4000/match", {
+      const res = await fetch("http://localhost:4000/report", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -35,15 +38,18 @@ function App() {
       });
 
       const data = await res.json();
-      setRequirements(data.matched);
+      setReport(data.report);
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error fetching report:", error);
+      setReport("שגיאה ביצירת הדוח. נסי שוב מאוחר יותר.");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <div className="container">
-      <h1>שאלון לעסק</h1>
+      <h1>שאלון רישוי עסקים</h1>
       <form onSubmit={handleSubmit} className="form">
         <label>
           גודל העסק (במ״ר):
@@ -87,21 +93,36 @@ function App() {
           העסק מגיש בשר
         </label>
 
-        <button type="submit">שלח</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "מפיק דוח..." : "שלח"}
+        </button>
       </form>
 
-      {requirements && (
-        <div className="results">
-          <h2>דרישות לעסק שלך:</h2>
-          <ul>
-            {requirements.map((req, index) => (
-              <li key={index}>
-                <strong>{req.requirement}</strong>  
-                <br />
-                <small>{req.reference}</small>
-              </li>
-            ))}
-          </ul>
+      {report && (
+        <div className="report-box">
+          <h2>📑 דוח חכם מותאם לעסק שלך:</h2>
+          {report.split("\n").map((line, idx) => {
+            if (!line.trim()) return null;
+            if (line.startsWith("**") && line.endsWith("**")) {
+              return (
+                <h3 key={idx} className="category-title">
+                  {line.replace(/\*\*/g, "")}
+                </h3>
+              );
+            }
+            if (line.startsWith("*")) {
+              return (
+                <li key={idx} className="report-item">
+                  {line.replace("*", "").trim()}
+                </li>
+              );
+            }
+            return (
+              <p key={idx} className="report-text">
+                {line}
+              </p>
+            );
+          })}
         </div>
       )}
     </div>
