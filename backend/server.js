@@ -42,6 +42,7 @@ ${requirements.map((r) => `- ${r.requirement} (${r.reference})`).join("\n")}
 - הוסף סדר עדיפויות: חובה מיד / חשוב / כדאי.
 - הצג את התוצאה ברשימות נקודות, מסודר וקריא.
  אל תכלול שם עסק, תאריך .
+ אם יש תקן מסויים, תכתוב מה הוא אומר, זה צריך להיות מובן למשתמש
 `;
 
   const result = await model.generateContent(prompt);
