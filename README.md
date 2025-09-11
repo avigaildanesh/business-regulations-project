@@ -183,6 +183,15 @@ python process_file.py regulations.docx
 
 ---
 
+## צילומי מסך
+<img width="1919" height="965" alt="image" src="https://github.com/user-attachments/assets/e3b8ea09-897f-460a-a374-68262ec44858" />
+<img width="928" height="902" alt="image" src="https://github.com/user-attachments/assets/c7281ff1-2e02-4bee-8b46-c08b8ed30808" />
+<img width="914" height="878" alt="image" src="https://github.com/user-attachments/assets/ebe6499e-d714-4159-af0d-fd0a5d8bcc1b" />
+
+
+
+
+
 ---
 
 ## 📦 Dependencies
