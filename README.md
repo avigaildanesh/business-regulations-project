@@ -1,3 +1,40 @@
+##📘 Business Licensing Assistant – מערכת הערכת רישוי עסקים
+תיאור הפרויקט ומטרותיו:
+המערכת נועדה לסייע לבעלי עסקים בישראל להבין את דרישות הרישוי הרלוונטיות עבורם.
+היא מקבלת מידע על העסק (כמו שטח, מספר מקומות ישיבה ושימוש בגז/בשר), מסננת דרישות מתוך תקנות רישוי עסקים, ומחזירה דוח מותאם אישית וברור בשפה נגישה.
+
+ארכיטקטורה: 
+
+Frontend (שאלון React)
+        |
+        v
+Backend API (Node.js + Express)
+        |
+        v
+Business Rules JSON
+        |
+        v
+AI Engine (Gemini)
+        |
+        v
+Personalized Report (דו"ח מותאם)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 To run the script 
 cd backend
 python data/process_file.py data/mydoc.pdf
