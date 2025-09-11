@@ -127,16 +127,6 @@ npm start
    - `gas_safety` (גז, גפ״מ)  
    - `public_health` (בשר, דגים, מזון, בריאות)  
 6. **שמירה לפורמט JSON** – יוצר `requirements.json` עם מבנה מסודר:  
-   ```json
-   {
-     "requirements": {
-       "fire_safety": [...],
-       "gas_safety": [...],
-       "public_health": [...]
-     }
-   }
-   ```
-
 ### איך להריץ?
 ```bash
 python process_file.py regulations.pdf
