@@ -47,7 +47,7 @@ npm start
 ## 📡 תיעוד API
 
 ### 1. ניתוח עסק
-**POST** `/analyze`  
+**POST** `/report`  
 
 קלט:
 ```json
