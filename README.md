@@ -24,8 +24,8 @@ flowchart LR
 ### דרישות מקדימות
 - Node.js
 - npm
-- API Key ל־ Gemini / GPT (להכניס בקובץ `.env`)
-במקרה שצריך שאני אביא key, אשמח שתפנו אליי ואשלח את הקובץ env.
+- API Key ל־ Gemini / GPT (להכניס בקובץ `.env`)- if needed, i would be happy to give you .env file, just tell me :)
+- link- https://aistudio.google.com/app/apikey
 
 ### התקנה
 ```bash
