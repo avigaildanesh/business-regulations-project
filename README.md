@@ -185,9 +185,15 @@ python process_file.py regulations.docx
 ---
 
 ## צילומי מסך
+עסק 300 מ"ר ו80 מקומותת ישיבה- אם משתמשים בגז ומגישים בשר:
 <img width="1919" height="965" alt="image" src="https://github.com/user-attachments/assets/e3b8ea09-897f-460a-a374-68262ec44858" />
 <img width="917" height="843" alt="image" src="https://github.com/user-attachments/assets/7e22e7c1-83e3-4e6a-b9fd-4a29dea0934a" />
 <img width="907" height="710" alt="image" src="https://github.com/user-attachments/assets/1675d44d-7514-440e-97e6-ec319e2f709c" />
+
+עסק 50 מ"ר ו15 מקומות ישיבה - אם לא משתמשים בגז ומגישים בשר:
+<img width="994" height="572" alt="image" src="https://github.com/user-attachments/assets/b2f62e1b-d4d1-40b1-a12f-cb543ada5bf9" />
+<img width="924" height="709" alt="image" src="https://github.com/user-attachments/assets/af27b84d-7b5c-41ff-8081-2edd4c6f68bd" />
+
 
 
 
