@@ -14,7 +14,7 @@ flowchart LR
     A[Frontend - שאלון React] --> B[Backend API - Node.js + Express]
     B --> C[Business Rules JSON]
     C --> D[AI Engine - Gemini]
-    D --> E[Personalized Report - דו״ח מותאם]
+    D --> E[Personalized Report]
 ```
 
 ---
@@ -143,8 +143,8 @@ python process_file.py regulations.docx
 ## 🤖 שימוש ב-AI
 
 ### כלי פיתוח בהם נעשה שימוש
-- ChatGPT 5 
-
+- ChatGPT  
+לייעוץ באיזה טכנולוגיות להשתמש, הבנת בעיות ופתרונן, עיצוב.
 ### מודל שפה מרכזי
 - gemini-1.5-flash (Google AI)  
 
