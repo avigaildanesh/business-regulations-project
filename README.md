@@ -130,6 +130,7 @@ npm start
 ### איך להריץ?
 ```bash
 python process_file.py regulations.pdf
+
 ```
 או:
 ```bash
