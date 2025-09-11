@@ -31,20 +31,16 @@ def detect_conditions(text):
     if match_area:
         conditions["areaMin"] = int(match_area.group(1))
 
-    # זיהוי מקומות ישיבה
     match_seats = re.search(r"(\d+)\s*מקומות\s*ישיבה", text)
     if match_seats:
         conditions["seatsMin"] = int(match_seats.group(1))
 
-    # זיהוי גז
     if "גז" in text or "גפ\"מ" in text:
         conditions["usesGas"] = True
 
-    # זיהוי בשר
     if "בשר" in text or "עופות" in text or "דגים" in text:
         conditions["servesMeat"] = True
 
-    # ברירת מחדל
     if not conditions:
         conditions["always"] = True
 
@@ -66,7 +62,7 @@ def categorize_requirement(text):
     elif "בשר" in text or "עופות" in text or "דגים" in text or "מזון" in text or "בריאות" in text:
         return "public_health"
     else:
-        return "public_health"  # ברירת מחדל
+        return "public_health"
 
 def process_text_to_requirements(text):
     requirements = {
